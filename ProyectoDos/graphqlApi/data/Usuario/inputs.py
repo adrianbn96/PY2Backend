@@ -1,3 +1,4 @@
+from django.db.models.fields import DateField
 from graphene import InputObjectType
 from graphene.types.scalars import ID
 from graphene.types.scalars import String
@@ -13,7 +14,12 @@ class CreateUserInput(InputObjectType):
     """
 
     name = String(required=True)
-    
+    telephone=String()
+    email = String()
+    password = String()
+    rol = String()
+    fechaNacimiento = String()
+    estadoUsuario = Boolean()
 
 class UpdateUserInput(InputObjectType):
     """

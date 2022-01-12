@@ -10,9 +10,9 @@ from graphql import GraphQLError
 from graphql_relay.node.node import from_global_id
 
 from temple.models import Usuario
-from graphqlApi.data.manager.types import UsuarioNode
-from graphqlApi.data.manager.inputs import CreateUserInput
-from graphqlApi.data.manager.inputs import UpdateUserInput
+from graphqlApi.data.Usuario.types import UsuarioNode
+from graphqlApi.data.Usuario.inputs import CreateUserInput
+from graphqlApi.data.Usuario.inputs import UpdateUserInput
 
 from graphqlApi.utils import delete_attributes_none
 from graphqlApi.utils import transform_global_ids
@@ -29,9 +29,9 @@ class CreateUsuario(Mutation):
 
     def mutate(self, info, input):
         input = delete_attributes_none(**vars(input))
-        manager = Usuario.objects.create(**input)
+        usuario = Usuario.objects.create(**input)
 
-        return CreateUsuario(manager=manager)
+        return CreateUsuario(usuario=usuario)
 
 class UpdateUsuario(Mutation):
     """Clase para actualizar establecimientos"""

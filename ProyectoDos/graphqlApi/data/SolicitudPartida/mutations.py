@@ -10,8 +10,8 @@ from graphql import GraphQLError
 from graphql_relay.node.node import from_global_id
 
 from temple.models import SolicitudPartida
-from graphqlApi.data.temple.types import SolicitudPartidaNode
-from graphqlApi.data.temple.inputs import CreateTempleInput
+from graphqlApi.data.SolicitudPartida.types import SolicitudPartidaNode
+from graphqlApi.data.SolicitudPartida.inputs import CreateTempleInput
 
 from graphqlApi.utils import delete_attributes_none
 from graphqlApi.utils import transform_global_ids

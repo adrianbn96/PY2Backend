@@ -7,10 +7,10 @@ from graphene_django.filter import DjangoFilterConnectionField
 
 from temple.models import SolicitudPartida,Usuario
 
-from .data.temple.types import SolicitudPartidaNode
-from .data.manager.types import UsuarioNode
+from .data.SolicitudPartida.types import SolicitudPartidaNode
+from .data.Usuario.types import UsuarioNode
 
-from .data.manager.mutations import CreateUsuario, DeleteManager,UpdateUsuario
+from .data.Usuario.mutations import CreateUsuario, DeleteManager,UpdateUsuario
 
 class Query(ObjectType):
     """Endpoint para consultar registros"""
